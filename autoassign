@@ -1,0 +1,10 @@
+#!/bin/sh
+# Runs the script
+# export the env. vars API_KEY and BUDGET_ID in the env.
+source ./env/bin/activate
+if [ $# -eq 0 ]
+  then
+    python ./src/autoassign.py
+  else
+    python ./src/autoassign.py "$1"
+fi
